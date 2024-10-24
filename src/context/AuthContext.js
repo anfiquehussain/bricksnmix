@@ -54,7 +54,6 @@ export const AuthProvider = ({ children }) => {
         headers: {
           "Content-Type": "application/json",
         },
-        withCredentials: true,  // Add this line if sending cookies
       });
       const userData = {
         user_name: response.data.Data.user_name,
@@ -86,7 +85,6 @@ export const AuthProvider = ({ children }) => {
         headers: {
           "Content-Type": "application/json",
         },
-        withCredentials: true,
       });
 
       console.log(response.data.message);
