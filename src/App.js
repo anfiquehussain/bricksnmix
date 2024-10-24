@@ -23,9 +23,7 @@ function App() {
         <Route
           path="/projects"
           element={
-            <PrivateRoute>
               <Projects />
-            </PrivateRoute>
           }
         />
         <Route

@@ -10,6 +10,7 @@ module.exports = {
         white: "#FFFF",
         BrightGreen: "#05BF02",
         ForestGreen: "#106939",
+        TealGreen: "#27965A",
       },
     },
   },
