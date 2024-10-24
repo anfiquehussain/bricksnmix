@@ -50,12 +50,18 @@ export const AuthProvider = ({ children }) => {
   // Login function to handle API call and update the state
   const login = async (formData) => {
     try {
-      const response = await axios.post(`${BASE_URL}api/v2/login/`, formData);
+      const response = await axios.post(`${BASE_URL}api/v2/login/`, formData,{
+        headers: {
+          "Content-Type": "application/json",
+        },
+        withCredentials: true,  // Add this line if sending cookies
+      });
       const userData = {
         user_name: response.data.Data.user_name,
         user_type: response.data.Data.user_type,
         email: response.data.Data.email,
       };
+      
 
       localStorage.setItem("token", response.data.Data.access);
       localStorage.setItem("user", JSON.stringify(userData));
@@ -76,15 +82,12 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (formData) => {
     try {
-      const response = await axios.post(
-        `${BASE_URL}seller-signup/`,
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
+      const response = await axios.post(`${BASE_URL}seller-signup/`, formData, {
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        withCredentials: true,
+      });
 
       console.log(response.data.message);
       console.log(response);
