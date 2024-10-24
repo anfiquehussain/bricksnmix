@@ -129,7 +129,7 @@ function SignIn() {
             <p className="mb-4 text-start text-sm">
               Create new account{" "}
               <span className="cursor-pointer font-bold underline">
-                <Link to="/signup">Sign Up</Link>
+                <Link to="/sign-up">Sign Up</Link>
               </span>
             </p>
 

@@ -51,7 +51,7 @@ function SignUp() {
                 setTimeout(() => {
                     setFormData({ username: "", email: "", password: "", confirm_password: "" }); // Clear form
                     // Navigate to sign-in page
-                    window.location.href = "/";
+                    window.location.href = "/sign-in";
                 }, 2000);
             } else {
                 setError(success.message.username[0] || "Registration failed. Please try again."); // Handle specific errors
@@ -145,7 +145,7 @@ function SignUp() {
                         <p className="mb-4 text-start text-sm">
                             Create new account{" "}
                             <span className="cursor-pointer font-bold underline">
-                                <Link to="/">Sign In</Link>
+                                <Link to="/sign-in">Sign In</Link>
                             </span>
                         </p>
 

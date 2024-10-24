@@ -11,6 +11,7 @@ module.exports = {
         BrightGreen: "#05BF02",
         ForestGreen: "#106939",
         TealGreen: "#27965A",
+        WhiteSmoke:"#F9F9F9"
       },
     },
   },

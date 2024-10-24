@@ -5,44 +5,35 @@ import ContactUs from "./pages/ContactUs/ContactUs";
 import Projects from "./pages/Projects/Projects";
 import Services from "./pages/Services/Services";
 import SignIn from "./pages/SignIn/SignIn";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import PrivateRoute from "./Protector/PrivateRoute"; // PrivateRoute component
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import SignUp from "./pages/SignUp/SignUp";
+import Footer from "./components/Footer/Footer";
+import NotFound from "./pages/NotFound/NotFound"; // Import the NotFound page component
 
 function App() {
   const location = useLocation();
-  const excludedRoutes = ["/", "/signup"]; // Paths where Navbar shouldn't be displayed
+  const excludedRoutes = ["/sign-in", "/sign-up"];
 
   return (
     <div className="App">
-      {/* Conditionally rendering Navbar if route is not in the excludedRoutes */}
       {!excludedRoutes.includes(location.pathname) && <Navbar />}
       <Routes>
-        <Route path="/" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route
-          path="/projects"
-          element={
-              <Projects />
-          }
-        />
-        <Route
-          path="/contact-us"
-          element={
-            <PrivateRoute>
-              <ContactUs />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/services"
-          element={
-            <PrivateRoute>
-              <Services />
-            </PrivateRoute>
-          }
-        />
+        <Route path="/" element={<Navigate to="/projects" />} />
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="*" element={<NotFound />} />{" "}
+        {/* Catch-all route for undefined paths */}
       </Routes>
+      {!excludedRoutes.includes(location.pathname) && <Footer />}
     </div>
   );
 }
@@ -53,6 +44,7 @@ function AppWithRouter() {
       <BrowserRouter>
         <App />
       </BrowserRouter>
+      
     </AuthProvider>
   );
 }

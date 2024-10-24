@@ -20,9 +20,7 @@ function Projects() {
         image5={image5}
       />
       <ProjecrContactForm/>
-      <div>
-        Projects
-      </div>
+
     </>
   );
 }

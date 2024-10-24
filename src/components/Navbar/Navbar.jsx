@@ -84,7 +84,7 @@ function Navbar() {
                 Logout
               </button>
             ) : (
-                <NavLink to="/" className={({ isActive }) => isActive ? 'text-BrightGreen' : 'text-gray-700 hover:text-BrightGreen'}>
+                <NavLink to="sign-in" className={({ isActive }) => isActive ? 'text-BrightGreen' : 'text-gray-700 hover:text-BrightGreen'}>
                 Sign In / Sign Up
               </NavLink>
             )}
@@ -127,7 +127,7 @@ function Navbar() {
                 Logout
               </button>
             ) : (
-                <NavLink to="/" className={({ isActive }) => isActive ? 'text-BrightGreen' : 'text-gray-700 hover:text-BrightGreen'}>
+                <NavLink to="sign-in" className={({ isActive }) => isActive ? 'text-BrightGreen' : 'text-gray-700 hover:text-BrightGreen'}>
                 Sign In / Sign Up
               </NavLink>
             )}
