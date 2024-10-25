@@ -104,7 +104,7 @@ function ServiceContactForm() {
               {/* Phone */}
               <div className="col-span-2 sm:col-span-1">
                 <label htmlFor="phone" className="text-gray-700 block">
-                  Phone
+                  Phone Number
                 </label>
                 <input
                   type="number"

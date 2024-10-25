@@ -28,16 +28,16 @@ function Footer() {
                                 <Link to="/projects">Projects</Link>
                             </li>
                             <li className='hover:text-BrightGreen cursor-pointer'>
-                                <Link to="/">Customer</Link>
+                                <Link to="/c">Customer</Link>
                             </li>
                             <li className='hover:text-BrightGreen cursor-pointer'>
-                                <Link to="/">Seller</Link>
+                                <Link to="/c">Seller</Link>
                             </li>
                         </ul>
 
                         <ul className='flex flex-col text-start'>
                             <li className='hover:text-BrightGreen cursor-pointer'>
-                                <Link to="/">About Us</Link>
+                                <Link to="/c">About Us</Link>
                             </li>
                             <li className='hover:text-BrightGreen cursor-pointer'>
                                 <Link to="/contact-us">Contact</Link>
