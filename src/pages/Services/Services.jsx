@@ -12,7 +12,7 @@ function Services() {
                 subtitle="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque at provident voluptates vitae, explicabo ipsum,"
             />
 
-            <div className="flex flex-col gap-4 md:flex-row md:flex-wrap md:justify-center px-4 py-8">
+            <div className="flex flex-col gap-4 md:flex-row md:justify-center px-4 py-8">
                 <Card img={img} title="Construction" subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
                 <Card img={img} title="Construction" subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
                 <Card img={img} title="Construction" subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
